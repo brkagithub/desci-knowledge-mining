@@ -90,34 +90,10 @@ airflow dags unpause <dag_id>
 
 ```sh
     curl -X POST http://localhost:5000/trigger_pipeline \
-    -F "file=@test_pdfs/22pages_eng.pdf" \
-    -F "pipelineId=pdf_to_jsonld" \
-    -F "fileFormat=pdf" \
-    -b "connect.sid=s%3A0RtRtgNy-l4PtQy1j6d8slVEUDCg_U2S.RpjIRxU5gXJxmHtTQwJ1EwaTGIvi5eaT3KFsYtOrDOU; Path=/; HttpOnly;"
-```
-
-```sh
-    curl -X POST http://localhost:5000/trigger_pipeline \
     -F "file=@test_pdfs/science_paper.pdf" \
     -F "pipelineId=desci_pdf_to_jsonld" \
     -F "fileFormat=pdf" \
     -b "connect.sid=s%3AjLYArFLH7IadiB4dkEDrppgEEQJEqNss.35WzNEW3PySPRIxrDpL5tsRZ%2F%2B%2FNo%2BnZgRPDoRz0y7g; Path=/; HttpOnly;"
-```
-
-```sh
-    curl -X POST http://localhost:5000/trigger_pipeline \
-    -F "file=@test_jsons/entertainment_test.json" \
-    -F "pipelineId=simple_json_to_jsonld" \
-    -F "fileFormat=json" \
-    -b "connect.sid=s%3A0RtRtgNy-l4PtQy1j6d8slVEUDCg_U2S.RpjIRxU5gXJxmHtTQwJ1EwaTGIvi5eaT3KFsYtOrDOU; Path=/; HttpOnly;"
-```
-
-```sh
-   curl -X POST http://localhost:5000/trigger_pipeline \
-    -F "file=@test_jsons/valid_jsonld.json" \
-    -F "pipelineId=simple_json_to_jsonld" \
-    -F "fileFormat=json" \
-    -b "connect.sid=s%3A0RtRtgNy-l4PtQy1j6d8slVEUDCg_U2S.RpjIRxU5gXJxmHtTQwJ1EwaTGIvi5eaT3KFsYtOrDOU; Path=/; HttpOnly;"
 ```
 
 **Trigger the vectorization DAG via POST request**

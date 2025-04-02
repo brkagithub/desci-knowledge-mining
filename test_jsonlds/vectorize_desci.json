@@ -1,0 +1,343 @@
+[
+  {
+    "@context": {
+      "fabio": "http://purl.org/spar/fabio/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "cito": "http://purl.org/spar/cito/",
+      "doco": "http://purl.org/spar/doco/",
+      "pro": "http://purl.org/spar/pro/",
+      "obi": "http://purl.obolibrary.org/obo/"
+    },
+    "@type": "fabio:ResearchPaper",
+    "dcterms:title": "De novo generation of multi-target compounds using deep generative chemistry",
+    "dcterms:creator": [
+      {
+        "@type": "foaf:Person",
+        "foaf:name": "Brenton P. Munson"
+      },
+      {
+        "@type": "foaf:Person",
+        "foaf:name": "Michael Chen"
+      },
+      {
+        "@type": "foaf:Person",
+        "foaf:name": "Audrey Bogosian"
+      },
+      {
+        "@type": "foaf:Person",
+        "foaf:name": "Jason F. Kreisberg"
+      },
+      {
+        "@type": "foaf:Person",
+        "foaf:name": "Katherine Licon"
+      },
+      {
+        "@type": "foaf:Person",
+        "foaf:name": "Ruben Abagyan"
+      },
+      {
+        "@type": "foaf:Person",
+        "foaf:name": "Brent M. Kuenzi"
+      },
+      {
+        "@type": "foaf:Person",
+        "foaf:name": "Trey Ideker"
+      }
+    ],
+    "dcterms:abstract": "Polypharmacology drugs\u2014compounds that inhibit multiple proteins\u2014have many applications but are difficult to design. To address this challenge we have developed POLYGON, an approach to polypharmacology based on generative reinforcement learning. POLYGON embeds chemical space and iteratively samples it to generate new molecular structures; these are rewarded by the predicted ability to inhibit each of two protein targets and by drug-likeness and ease-of-synthesis. In binding data for >100,000 compounds, POLYGON correctly recognizes polypharmacology interactions with 82.5% accuracy. We subsequently generate de-novo compounds targeting ten pairs of proteins with documented co-dependency. Docking analysis indicates that top structures bind their two targets with low free energies and similar 3D orientations to canonical single-protein inhibitors. We synthesize 32 compounds targeting MEK1 and mTOR, with most yielding >50% reduction in each protein activity and in cell viability when dosed at 1\u201310 \u03bcM. These results support the potential of generative modeling for polypharmacology.",
+    "dcterms:identifier": "https://doi.org/10.1038/s41467-024-47120-y",
+    "obi:OBI_0000968": [
+      {
+        "foaf:name": "Capillary western blotting",
+        "dcterms:description": "Used to measure phosphorylation of kinase substrates as a readout of kinase activity"
+      },
+      {
+        "foaf:name": "Cell viability assay",
+        "dcterms:description": "Used to measure the growth inhibitory effect of compounds on lung cancer cells"
+      },
+      {
+        "foaf:name": "Molecular docking",
+        "dcterms:description": "Used to computationally model the binding of compounds to protein targets"
+      }
+    ],
+    "obi:OBI_0200000": [
+      {
+        "dcterms:description": "Normalization of compound activity scores: Compound activity scores were normalized to the range [0, 1] using half-Gaussian scaling"
+      },
+      {
+        "dcterms:description": "Random forest regression: Used to predict the ligand efficiency of compounds for MEK1 and mTOR targets"
+      }
+    ],
+    "obi:OBI_0000293": [
+      {
+        "dcterms:description": "Generated data on the activity and selectivity of de novo designed compounds targeting MEK1 and mTOR kinases"
+      }
+    ],
+    "obi:OBI_0000070": [
+      {
+        "dcterms:description": "In vitro kinase activity assays measuring phosphate transfer to substrate"
+      }
+    ],
+    "obi:OBI_0000251": [
+      {
+        "dcterms:description": "N/A (not a clinical study)"
+      }
+    ],
+    "obi:OBI_0000299": [
+      {
+        "@id": "http://purl.obolibrary.org/obo/GO_0097341",
+        "obi:RO_0002629": {
+          "@id": "http://purl.obolibrary.org/obo/GO_0050789",
+          "dcterms:description": "The inhibition of multiple target proteins by the polypharmacology compounds is expected to regulate various biological processes, including those involved in disease pathways."
+        }
+      },
+      {
+        "@id": "http://purl.obolibrary.org/obo/DOID_162",
+        "dcterms:title": "Cancer",
+        "dcterms:description": "The paper describes a generative machine learning model called POLYGON that can be used to systematically generate, synthesize, and experimentally validate candidate polypharmacology compounds targeting multiple proteins involved in cancer. The model was able to correctly recognize existing polypharmacology interactions with 82.5% accuracy and was used to generate novel compounds targeting ten pairs of synthetic-lethal cancer proteins. Molecular docking analysis and experimental validation showed that the generated compounds were able to bind and inhibit the intended target proteins."
+      },
+      {
+        "@id": "http://purl.obolibrary.org/obo/CHEBI_35358",
+        "dcterms:title": "Benzazole Sulfonamide",
+        "dcterms:description": "A type of chemical compound that was analyzed in the paper, which was found to be active against multiple protein targets such as MEK1 and mTOR."
+      },
+      {
+        "@id": "http://purl.obolibrary.org/obo/CHEBI_16227",
+        "dcterms:title": "Benzamide Pyridine",
+        "dcterms:description": "A type of chemical compound that was analyzed in the paper, which was found to be active against multiple protein targets such as MEK1 and mTOR."
+      },
+      {
+        "@id": "http://purl.obolibrary.org/obo/CHEBI_53789",
+        "dcterms:title": "Diphenyl Benzopyridine",
+        "dcterms:description": "A type of chemical compound that was analyzed in the paper, which was found to be active against multiple protein targets such as MEK1 and mTOR."
+      },
+      {
+        "@id": "http://purl.bioontology.org/ontology/ATC/L01EE01",
+        "dcterms:title": "Trametinib",
+        "dcterms:description": "Trametinib is a canonical MEK1 inhibitor that binds to the MEK1 protein with a favorable binding energy of -9.2 kcal/mol."
+      },
+      {
+        "@id": "http://purl.bioontology.org/ontology/ATC/L01EG",
+        "dcterms:title": "Rapamycin",
+        "dcterms:description": "Rapamycin is a canonical mTOR inhibitor that binds to the mTOR-FRB complex with a favorable binding energy of -8.6 kcal/mol."
+      }
+    ],
+    "cito:cites": [
+      {
+        "@id": "https://doi.org/10.2174/1381612822666160923145032",
+        "dcterms:title": "Polypharmacology in precision oncology: current applications and future prospects"
+      },
+      {
+        "@id": "https://doi.org/10.1016/j.tips.2005.02.007",
+        "dcterms:title": "The efficiency of multi-target drugs: the network approach might help drug design"
+      },
+      {
+        "@id": "https://doi.org/10.1038/nrc2885",
+        "dcterms:title": "Systems approaches to polypharmacology and drug discovery"
+      },
+      {
+        "@id": "https://doi.org/10.1038/nrc2787",
+        "dcterms:title": "Targeting the cancer kinome through polypharmacology"
+      },
+      {
+        "@id": "https://doi.org/10.1038/nchembio.2502",
+        "dcterms:title": "Polypharmacology-based ceritinib repurposing using integrated functional proteomics"
+      },
+      {
+        "@id": "https://doi.org/10.1016/j.chembiol.2019.07.005",
+        "dcterms:title": "Divergent polypharmacology-driven cellular activity of structurally similar multi-kinase inhibitors through cumulative effects on individual targets"
+      },
+      {
+        "@id": "https://doi.org/10.1016/j.ccell.2021.07.022",
+        "dcterms:title": "Expanding control of the tumor cell cycle with a CDK2/4/6 inhibitor"
+      },
+      {
+        "@id": "https://doi.org/10.1021/jm5006463",
+        "dcterms:title": "Polypharmacology: challenges and opportunities in drug discovery"
+      },
+      {
+        "@id": "https://doi.org/10.1586/17512433.2013.748743",
+        "dcterms:title": "Polypharmacology: drug discovery for the future"
+      },
+      {
+        "@id": "https://doi.org/10.1002/anie.201502896",
+        "dcterms:title": "Fragment-based discovery of a dual pan-RET/VEGFR2 kinase inhibitor optimized for single-agent polypharmacology"
+      },
+      {
+        "@id": "https://clinicaltrials.gov/ct2/show/NCT03611738",
+        "dcterms:title": "Ceritinib Plus Docetaxel in ALK-Negative, EGFR WT Advanced NSCLC"
+      },
+      {
+        "@id": "https://doi.org/10.1038/s41467-021-21115-1",
+        "dcterms:title": "Crowdsourced mapping of unexplored target space of kinase inhibitors"
+      },
+      {
+        "@id": "https://doi.org/10.1021/acscentsci.7b00572",
+        "dcterms:title": "Automatic chemical design using a data-driven continuous representation of molecules"
+      },
+      {
+        "@id": "https://doi.org/10.1038/s41587-019-0224-x",
+        "dcterms:title": "Deep learning enables rapid identification of potent DDR1 kinase inhibitors"
+      },
+      {
+        "@id": "https://doi.org/10.1021/acs.jcim.8b00839",
+        "dcterms:title": "GuacaMol: benchmarking models for de novo molecular design"
+      },
+      {
+        "@id": "https://doi.org/10.1007/978-3-030-45257-5_24",
+        "dcterms:title": "PaccMannRL: designing anticancer drugs from transcriptomic data via reinforcement learning"
+      },
+      {
+        "@id": "https://doi.org/10.3389/fphar.2020.565644",
+        "dcterms:title": "Molecular sets (MOSES): a benchmarking platform for molecular generation models"
+      },
+      {
+        "@id": "https://doi.org/10.1561/9781680836233",
+        "dcterms:title": "An introduction to variational Autoencoders"
+      },
+      {
+        "@id": "https://doi.org/10.1371/journal.pcbi.1009302",
+        "dcterms:title": "Crowdsourced identification of multi-target kinase inhibitors for RET- and TAU- based disease: the multi-targeting drug DREAM challenge"
+      },
+      {
+        "@id": "https://openaccess.thecvf.com/content_CVPR_2020/html/Choi_StarGAN_v2_Diverse_Image_Synthesis_for_Multiple_Domains_CVPR_2020_paper.html",
+        "dcterms:title": "Stargan v2: diverse image synthesis for multiple domains"
+      },
+      {
+        "@id": "https://doi.org/10.48550/arXiv.1312.6114",
+        "dcterms:title": "Auto-encoding variational bayes"
+      },
+      {
+        "@id": "https://doi.org/10.1016/j.neunet.2012.04.001",
+        "dcterms:title": "Complex-valued autoencoders"
+      },
+      {
+        "@id": "https://doi.org/10.1093/nar/gky1075",
+        "dcterms:title": "ChEMBL: towards direct deposition of bioassay data"
+      },
+      {
+        "@id": "https://doi.org/10.1038/nrc2559",
+        "dcterms:title": "Targeting cancer with small molecule kinase inhibitors"
+      },
+      {
+        "@id": "https://doi.org/10.1093/nar/gkv1072",
+        "dcterms:title": "BindingDB in 2015: a public database for medicinal chemistry, computational chemistry and systems pharmacology"
+      },
+      {
+        "@id": "https://doi.org/10.1093/nar/gkz1008",
+        "dcterms:title": "LINCS Data Portal 2.0: next generation access point for perturbation-response signatures"
+      },
+      {
+        "@id": "https://doi.org/10.1093/nar/gkaa959",
+        "dcterms:title": "TCRD and Pharos 2021: mining the human proteome for disease biology"
+      },
+      {
+        "@id": "https://doi.org/10.1126/sciadv.aap7885",
+        "dcterms:title": "Deep reinforcement learning for de novo drug design"
+      },
+      {
+        "@id": "https://doi.org/10.1613/jair.301",
+        "dcterms:title": "Reinforcement learning: a survey"
+      },
+      {
+        "@id": "https://doi.org/10.1038/nchem.1243",
+        "dcterms:title": "Quantifying the chemical beauty of drugs"
+      },
+      {
+        "@id": "https://doi.org/10.1038/nmeth.4225",
+        "dcterms:title": "Combinatorial CRISPR\u2013Cas9 screens for de novo mapping of genetic interactions"
+      },
+      {
+        "@id": "https://doi.org/10.1038/s41598-023-35545-0",
+        "dcterms:title": "Multimodal perturbation analyses of cyclin-dependent kinases reveal a network of synthetic lethalities associated with cell-cycle regulation and transcriptional regulation"
+      },
+      {
+        "@id": "https://doi.org/10.1016/j.ccell.2018.01.019",
+        "dcterms:title": "BRD4 inhibition is synthetic lethal with PARP inhibitors through the induction of homologous recombination deficiency"
+      },
+      {
+        "@id": "https://doi.org/10.26434/chemrxiv.14774223",
+        "dcterms:title": "AutoDock Vina 1.2.0: new docking methods, expanded force field, and python bindings"
+      },
+      {
+        "@id": "https://doi.org/10.1002/jcc.20084",
+        "dcterms:title": "UCSF Chimera\u2013a visualization system for exploratory research and analysis"
+      },
+      {
+        "@id": "https://doi.org/10.1093/nar/28.1.235",
+        "dcterms:title": "The Protein Data Bank"
+      },
+      {
+        "@id": "https://doi.org/10.1080/07853890600551037",
+        "dcterms:title": "Targeting the ERK signaling pathway in cancer therapy"
+      },
+      {
+        "@id": "https://doi.org/10.1016/j.cell.2005.02.031",
+        "dcterms:title": "Phosphorylation and functional inactivation of TSC2 by Erk implications for tuberous sclerosis and cancer pathogenesis"
+      },
+      {
+        "@id": "https://doi.org/10.1038/bjc.2012.70",
+        "dcterms:title": "The synergistic interaction of MEK and PI3K inhibitors is modulated by mTOR inhibition"
+      },
+      {
+        "@id": "https://doi.org/10.1517/14728222.2012.638631",
+        "dcterms:title": "Targeting the MAPK-RAS-RAF signaling pathway in cancer therapy"
+      },
+      {
+        "@id": "https://doi.org/10.1021/cb5007019",
+        "dcterms:title": "Unexpected off-targets and paradoxical pathway activation by kinase inhibitors"
+      },
+      {
+        "@id": "https://doi.org/10.1124/pr.112.007336",
+        "dcterms:title": "Computational methods in drug discovery"
+      },
+      {
+        "@id": "https://doi.org/10.1016/j.cell.2017.06.010",
+        "dcterms:title": "Defining a cancer dependency map"
+      },
+      {
+        "@id": "https://doi.org/10.48550/arXiv.1409.1259",
+        "dcterms:title": "On the properties of neural machine translation: encoder-decoder approaches"
+      },
+      {
+        "@id": "https://doi.org/10.48550/arXiv.1412.6980",
+        "dcterms:title": "Adam: a method for stochastic optimization"
+      },
+      {
+        "@id": "https://doi.org/10.1016/s1359-6446(04)03069-7",
+        "dcterms:title": "Ligand efficiency: a useful metric for lead selection"
+      },
+      {
+        "@id": "https://doi.org/10.1186/1758-2946-1-8",
+        "dcterms:title": "Estimation of synthetic accessibility score of drug-like molecules based on molecular complexity and fragment contributions"
+      },
+      {
+        "@id": "https://doi.org/10.1021/c160017a018",
+        "dcterms:title": "The generation of a unique machine description for chemical structures-a technique developed at chemical abstracts service"
+      },
+      {
+        "@id": "https://europepmc.org/article/med/13081097",
+        "dcterms:title": "The problem of synergism and antagonism of combined drugs"
+      },
+      {
+        "@id": "https://doi.org/10.1093/bioinformatics/btx162",
+        "dcterms:title": "SynergyFinder: a web application for analyzing drug combination dose\u2013response matrix data"
+      },
+      {
+        "@id": "https://doi.org/10.1038/nmeth.3047",
+        "dcterms:title": "Improved vectors and genome-wide libraries for CRISPR screening"
+      },
+      {
+        "@id": "https://doi.org/10.1158/1535-7163.mct-15-0843",
+        "dcterms:title": "An unbiased oncology compound screen to identify novel combination strategies"
+      },
+      {
+        "@id": "https://doi.org/10.5281/zenodo.1071232",
+        "dcterms:title": "De novo generation of multi-target compounds using deep generative chemistry"
+      }
+    ],
+    "@id": "https://doi.org/10.1038/s41467-024-47120-y",
+    "dcterms:hasPart": "The research paper titled \"De novo generation of multi-target compounds using deep generative chemistry\" was authored by Brenton P. Munson, Michael Chen, Audrey Bogosian, Jason F. Kreisberg, Katherine Licon, Ruben Abagyan, Brent M. Kuenzi, and Trey Ideker. The study describes the development of POLYGON, a generative reinforcement learning approach to design polypharmacology compounds that can inhibit multiple protein targets.\n\nThe key findings are:\n- POLYGON correctly recognizes polypharmacology interactions with 82.5% accuracy based on binding data for over 100,000 compounds.\n- POLYGON was used to generate de novo compounds targeting ten pairs of proteins with documented co-dependency in cancer.\n- Molecular docking analysis indicates the generated compounds bind their two targets with low free energies and similar 3D orientations to canonical single-protein inhibitors.\n- Experimental validation synthesized 32 compounds targeting MEK1 and mTOR, with most yielding >50% reduction in each protein activity and in cell viability when dosed at 1-10 \u03bcM.\n\nThe study utilized various techniques, including capillary western blotting, cell viability assays, and molecular docking. Computational methods involved normalization of compound activity scores and random forest regression to predict ligand efficiency.\n\nThe entities involved include:\n- GO_0097341: The inhibition of multiple target proteins by the polypharmacology compounds is expected to regulate various biological processes, including those involved in disease pathways.\n- DOID_162: Cancer - The generative model was used to generate, synthesize, and validate polypharmacology compounds targeting multiple proteins involved in cancer.\n- CHEBI_35358: Benzazole Sulfonamide, CHEBI_16227: Benzamide Pyridine, CHEBI_53789: Diphenyl Benzopyridine - Types of chemical compounds analyzed in the study that were found to be active against multiple protein targets.\n- L01EE01: Trametinib - A canonical MEK1 inhibitor used as a reference.\n- L01EG: Rapamycin - A canonical mTOR inhibitor used as a reference."
+  }
+]
